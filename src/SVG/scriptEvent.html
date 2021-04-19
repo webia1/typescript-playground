@@ -12,8 +12,8 @@
     <script>
       function circle_click(evt) {
         const circle = evt.target;
-        let currentRadius = circle.getAttribute('r');
-        if (currentRadius == 100)
+        let currentRadius = Number(circle.getAttribute('r'));
+        if (currentRadius === 100)
           circle.setAttribute('r', currentRadius * 2);
         else circle.setAttribute('r', currentRadius * 0.5);
       }
