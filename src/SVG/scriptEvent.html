@@ -13,7 +13,7 @@
       function circle_click(evt) {
         const circle = evt.target;
         let currentRadius = Number(circle.getAttribute('r'));
-        if (currentRadius === 100)
+        if (currentRadius <= 50)
           circle.setAttribute('r', currentRadius * 2);
         else circle.setAttribute('r', currentRadius * 0.5);
       }
@@ -21,7 +21,7 @@
 
     <style>
       #idSvgArea {
-        background-color: yellowgreen;
+        background-color: rgb(233, 250, 3);
       }
     </style>
   </head>
@@ -37,27 +37,27 @@
     >
       <desc>Simple SVG Examples</desc>
 
-      <g transform="translate(50 50)">
+      <g transform="translate(200 100)">
         <rect
           x="0"
           y="0"
-          width="598"
-          height="498"
-          fill="yellow"
-          stroke="blue"
+          width="400"
+          height="400"
+          fill="yellowgreen"
+          stroke="none"
         />
 
         <circle
           onclick="circle_click(evt)"
-          cx="300"
-          cy="225"
-          r="100"
-          fill="red"
+          cx="200"
+          cy="200"
+          r="50"
+          fill="green"
         />
 
         <text
-          x="300"
-          y="480"
+          x="200"
+          y="460"
           font-family="Verdana"
           font-size="35"
           text-anchor="middle"
