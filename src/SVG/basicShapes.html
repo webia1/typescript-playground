@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SVG Examples</title>
+  </head>
+  <body>
+    <h1>SVG Examples</h1>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      viewBox="0 0 1920 1090"
+    >
+      <rect
+        x="10"
+        y="10"
+        width="300"
+        height="300"
+        fill="yellowgreen"
+        stroke="blue"
+        stroke-width="2"
+      />
+
+      <g transform="translate(150 150) rotate(-30)">
+        <rect
+          x="0"
+          y="0"
+          width="300"
+          height="300"
+          rx="50"
+          fill="none"
+          stroke="purple"
+          stroke-width="10"
+        />
+      </g>
+
+      <circle
+        cx="150"
+        cy="150"
+        r="100"
+        fill="red"
+        stroke="blue"
+        stroke-width="10"
+      />
+
+      <g transform="translate(300 150)">
+        <ellipse rx="150" ry="100" fill="green" />
+      </g>
+
+      <ellipse
+        transform="translate(400 150) rotate(-30)"
+        rx="150"
+        ry="100"
+        fill="none"
+        stroke="darkorange"
+        stroke-width="20"
+      />
+
+      <g stroke="black">
+        <line x1="100" y1="300" x2="300" y2="100" stroke-width="10" />
+        <line x1="300" y1="300" x2="500" y2="100" stroke-width="30" />
+        <line x1="500" y1="300" x2="700" y2="100" stroke-width="60" />
+      </g>
+
+      <polyline
+        fill="yellow"
+        stroke="blue"
+        stroke-width="10"
+        points="50,375
+              150,375 150,325 250,325 250,375
+              350,375 350,250 450,250 450,375
+              550,375 550,175 650,175 650,375
+              750,375 750,100 850,100 850,375
+              950,375 950,25 1050,25 1050,375
+              1150,375"
+      />
+      <g transform="translate(200 150)">
+        <polygon
+          fill="orange"
+          stroke="purple"
+          stroke-width="10"
+          points="350,75  379,161 469,161 397,215
+                    423,301 350,250 277,301 303,215
+                    231,161 321,161"
+        />
+      </g>
+
+      <g transform="translate(0 150) rotate(10)">
+        <polygon
+          fill="orange"
+          stroke="purple"
+          stroke-width="10"
+          points="850,75  958,137.5 958,262.5
+                    850,325 742,262.6 742,137.5"
+        />
+      </g>
+    </svg>
+  </body>
+</html>
