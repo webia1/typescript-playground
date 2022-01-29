@@ -46,5 +46,5 @@ switch (testStringArrayLength) {
     break;
   }
 }
-
+console.log(resultString); //?
 console.log(resultString[0]);
