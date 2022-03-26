@@ -3,7 +3,9 @@
     "src/**/*.ts",
     "nodemon-browser.json",
     "package.json",
-    "tsconfig.json"
+    "tsconfig.json",
+    "index.html",
+    "styles.css"
   ],
   "ignore": ["src/**/*.spec.ts"],
   "exec": "tsc",

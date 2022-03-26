@@ -1,1 +1,1 @@
-console.log('Dynamically transpiled.');
+console.log('Dynamically transpiled');
