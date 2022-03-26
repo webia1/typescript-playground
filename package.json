@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "nodemon --inspect",
+    "browser": "nodemon --config nodemon-browser.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Erkan Buelbuel",

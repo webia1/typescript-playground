@@ -1,0 +1,12 @@
+{
+  "watch": [
+    "src/**/*.ts",
+    "nodemon-browser.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "tsc",
+  "verbose": "true",
+  "ext": "ts"
+}
