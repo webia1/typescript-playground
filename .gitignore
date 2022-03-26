@@ -2,4 +2,3 @@ node_modules
 dist
 package-lock.json
 .vscode
-src/.DS_Store
