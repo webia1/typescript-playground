@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>INDEX</title>
+    <style>
+      .button {
+        border: 1px solid blue;
+      }
+
+      g:hover rect {
+        transition: stroke 0.5s;
+        fill: #f0f0f0;
+        stroke: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <svg width="100" height="auto">
+      <filter id="softness">
+        <feGaussianBlur stdDeviation="0.3" in="SourceGraphic" />
+        <feColorMatrix
+          type="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+          result="blur"
+        />
+        <feComposite operator="in" in="blur" in2="SourceGraphic" />
+      </filter>
+      <rect
+        x="0"
+        y="0"
+        width="100"
+        height="auto"
+        rx="10"
+        fill="none"
+        stroke="black"
+        filter="url(#softness)"
+        vector-effect="non-scaling-stroke"
+      />
+      <text
+        x="50"
+        y="15"
+        font-size="20"
+        text-anchor="middle"
+        dominant-baseline="central"
+      >
+        Button
+      </text>
+    </svg> -->
+
+    <svg width="300" height="auto">
+      <filter id="softness">
+        <feGaussianBlur stdDeviation="0.2" />
+        <feColorMatrix
+          type="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+          result="blur"
+        />
+        <feComposite operator="in" in="blur" in2="SourceGraphic" />
+      </filter>
+
+      <g transform="translate(10,20)">
+        <rect
+          x="0"
+          y="0"
+          width="100"
+          height="50"
+          rx="10"
+          fill="none"
+          stroke="black"
+          filter="url(#softness)"
+          vector-effect="non-scaling-stroke"
+        />
+        <text
+          x="50"
+          y="25"
+          font-size="20"
+          text-anchor="middle"
+          dominant-baseline="central"
+        >
+          Button 1
+        </text>
+      </g>
+      <g transform="translate(120,20)">
+        <rect
+          x="0"
+          y="0"
+          width="100"
+          height="50"
+          rx="10"
+          fill="none"
+          stroke="black"
+        />
+        <text
+          x="50"
+          y="25"
+          font-size="20"
+          text-anchor="middle"
+          dominant-baseline="central"
+        >
+          Button 2
+        </text>
+      </g>
+    </svg>
+
+    <!-- <svg width="100" height="auto">
+      <foreignObject width="100" height="auto">
+        <div class="button" style="width: 100px; height: auto">
+          <p style="text-align: center">Button</p>
+        </div>
+      </foreignObject>
+    </svg> -->
+
+    <!-- <svg width="100" height="auto">
+      <rect
+        x="0"
+        y="0"
+        width="100"
+        height="auto"
+        rx="10"
+        fill="none"
+        stroke="black"
+      />
+      <text
+        x="50"
+        y="50%"
+        font-size="20"
+        text-anchor="middle"
+        dy=".35em"
+      >
+        Button
+      </text>
+    </svg> -->
+
+    <!-- <svg width="100" height="auto">
+      <foreignObject width="100" height="auto" y="0">
+        <div class="button" style="width: 100px; height: auto">
+          <p style="text-align: center">Button 1</p>
+        </div>
+      </foreignObject>
+      <foreignObject width="100" height="auto" y="50">
+        <div class="button" style="width: 100px; height: auto">
+          <p style="text-align: center">Button 2</p>
+        </div>
+      </foreignObject>
+    </svg> -->
+  </body>
+</html>
