@@ -6,7 +6,7 @@
     "tsconfig.json"
   ],
   "ignore": ["src/**/*.spec.ts"],
-  "exec": "ts-node src/index.ts",
+  "exec": "clear && ts-node src/index.ts",
   "verbose": "true",
   "ext": "ts"
 }

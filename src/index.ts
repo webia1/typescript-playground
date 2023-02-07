@@ -1,17 +1,8 @@
-import { Observable } from 'rxjs';
+// const timeRegExp = /([1-9]|1[0-2]):([0-5][0-9])([ap]m)?/g;
+// let timeResult;
+// timeResult = 'Lunch at 11:45 or 12:45?'.match(timeRegExp);
+// console.log(timeResult);
 
-const observable$ = new Observable<string>((subscriber) => {
-  subscriber.next('Alice');
-  subscriber.next('Ben');
-  subscriber.error('Error happened!');
-  subscriber.complete();
-  return () => {
-    console.log('Tear Down Process');
-  };
-});
-
-observable$.subscribe({
-  next: (value: any) => console.log(value),
-  error: (error: any) => console.log(error),
-  complete: () => console.log('Completed!'),
-});
+/** outpus
+[ '11:45', '12:45' ]
+*/
