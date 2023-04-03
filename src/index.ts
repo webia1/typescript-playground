@@ -6,7 +6,7 @@ const path = require('path');
 async function createEmptyPdf() {
   const targetSize = 1 * 1024 * 1024;
   const folderPath = './PDF/100KB';
-  const name = '100KB_';
+  const name = '1MB_';
   const count = 60;
 
   if (!fs.existsSync(folderPath)) {
