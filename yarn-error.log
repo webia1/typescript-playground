@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add pdfkit
+
+PATH: 
+  /Users/x60027117/go/bin:/Users/x60027117/.gobrew/current/bin:/Users/x60027117/.gobrew/bin:/usr/local/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/x60027117/go/bin:/Users/x60027117/.gobrew/current/bin:/Users/x60027117/.gobrew/bin:/usr/local/sbin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.19.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND repo.bit.admin.ch
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:109:26)
+
+npm manifest: 
+  {
+    "name": "typescript-playground",
+    "version": "1.0.0",
+    "description": "@Webia1 TypeScript Empty Playground",
+    "main": "src/index.ts",
+    "scripts": {
+      "start": "nodemon --inspect",
+      "browser": "nodemon --config nodemon-browser.json",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Erkan Buelbuel",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^1.3.2",
+      "nodemon": "^2.0.7",
+      "openai": "^3.1.0",
+      "rxjs": "^6.6.6",
+      "ts-node": "^9.1.1"
+    },
+    "devDependencies": {
+      "typescript": "^4.8.0-dev.20220507"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

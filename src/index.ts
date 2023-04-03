@@ -1,8 +1,31 @@
-// const timeRegExp = /([1-9]|1[0-2]):([0-5][0-9])([ap]m)?/g;
-// let timeResult;
-// timeResult = 'Lunch at 11:45 or 12:45?'.match(timeRegExp);
-// console.log(timeResult);
+// create 100KB empty PDF file
+const { PDFDocument } = require('pdf-lib');
+const fs = require('fs');
+const path = require('path');
 
-/** outpus
-[ '11:45', '12:45' ]
-*/
+async function createEmptyPdf() {
+  const targetSize = 1 * 1024 * 1024;
+  const folderPath = './PDF/100KB';
+  const name = '100KB_';
+  const count = 60;
+
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath);
+  }
+
+  for (let i = 1; i <= count; i++) {
+    const pdfDoc = await PDFDocument.create();
+    const pdfBytes = await pdfDoc.save();
+    const padding = ' '.repeat(targetSize - pdfBytes.length);
+    const outputBytes = Buffer.concat([
+      pdfBytes,
+      Buffer.from(padding),
+    ]);
+    const fileName = `${name}${i}.pdf`;
+    const filePath = path.join(folderPath, fileName);
+    fs.writeFileSync(filePath, outputBytes);
+    console.log(`Created file: ${filePath}`);
+  }
+}
+
+createEmptyPdf();
