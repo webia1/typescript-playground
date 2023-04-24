@@ -11,7 +11,8 @@
   "author": "Erkan Buelbuel",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "rxjs": "^7.8.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.11"
