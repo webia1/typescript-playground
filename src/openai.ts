@@ -21,4 +21,4 @@ const response = openai.post('/engines/davinci/completions', {
   stop: ['\n'],
 });
 
-response.then((res) => console.log(res.data));
+response.then((res: any) => console.log(res.data));
