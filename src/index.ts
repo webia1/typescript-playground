@@ -1,22 +1,55 @@
-import { from } from 'rxjs';
-import { map, reduce } from 'rxjs/operators';
-const add = (x: number, y: number) => x + y;
-from([
-  {
-    date: '2016-07-01',
-    amount: -320.0,
-  },
-  {
-    date: '2016-07-13',
-    amount: 1000.0,
-  },
-  {
-    date: '2016-07-22',
-    amount: 45.0,
-  },
-])
-  .pipe(
-    map((x) => x.amount),
-    reduce(add, 0),
-  )
-  .subscribe(console.log);
+function startsWithFn(str: string, prefix: string): boolean {
+  return str.slice(0, prefix.length) === prefix;
+}
+
+function endsWithFn(str: string, suffix: string): boolean {
+  return str.slice(-suffix.length) === suffix;
+}
+
+function generateCombinations(
+  str: string,
+  length: number,
+  startWith: string,
+  endsWith: string,
+): string[] {
+  const combinations: string[] = [];
+  generateHelper(str, '', length, combinations, startWith, endsWith);
+  return combinations;
+}
+
+function generateHelper(
+  str: string,
+  prefix: string,
+  length: number,
+  combinations: string[],
+  startWith: string,
+  endsWith: string,
+): void {
+  if (length === 0) {
+    if (
+      startsWithFn(prefix, startWith) &&
+      endsWithFn(prefix, endsWith)
+    ) {
+      combinations.push(prefix);
+    }
+  } else {
+    for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+      generateHelper(
+        str,
+        prefix + char,
+        length - 1,
+        combinations,
+        startWith,
+        endsWith,
+      );
+    }
+  }
+}
+
+let str: string = 'erkanabcdefghijklmnoprstuvyz';
+let n: number = 7;
+let startsWithStr = 'biri';
+let endsWithStr = 'ci';
+let result = generateCombinations(str, n, startsWithStr, endsWithStr);
+console.log('Result:', result);
