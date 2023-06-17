@@ -1,22 +1,24 @@
-import { from } from 'rxjs';
-import { map, reduce } from 'rxjs/operators';
-const add = (x: number, y: number) => x + y;
-from([
-  {
-    date: '2016-07-01',
-    amount: -320.0,
-  },
-  {
-    date: '2016-07-13',
-    amount: 1000.0,
-  },
-  {
-    date: '2016-07-22',
-    amount: 45.0,
-  },
-])
-  .pipe(
-    map((x) => x.amount),
-    reduce(add, 0),
-  )
-  .subscribe(console.log);
+export type BType = `${string}${number}${number}${number}`;
+
+export function isBType(value: string): value is BType {
+  return /^A8[012]{1}[0-9]{1}$/g.test(value);
+}
+
+export const BTypeArr: Array<BType> = [
+  'A800',
+  'A803',
+  'A813',
+  'A814',
+  'A823',
+  'A833',
+];
+
+BTypeArr.forEach((bType) => {
+  if (!isBType(bType)) {
+    console.warn(`Invalid BType: ${bType}`);
+    console.log(`Expected: ${/^A8[012]{1}[0-9]{1}$/g}`);
+    console.log(
+      `Expected: A8 followed by 0, 1 or 2 followed by any number`,
+    );
+  }
+});
