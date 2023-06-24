@@ -14,6 +14,7 @@ function generateCombinations(
 ): Map<string, Set<string>> {
   let combinations: Map<string, Set<string>> = new Map();
   let memo: Map<string, Set<string>> = new Map();
+
   generateHelper(
     str,
     '',
